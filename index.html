@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav>
+                <h1 class="header__logo">Weather App</h1>
+                <form id="search-form">
+                    <div class="header__input-wrapper">
+                        <input id="search-input" type="text" placeholder="Search places" >
+                        <i class="fas fa-search"></i>
+                    </div>
+                </form>
+                <div class="header__theme-toggle">
+                    <input id="theme" type="checkbox"/>
+                    <label for="theme" class="toggle-circle">
+                        <i class="fa-regular fa-sun"></i>
+                        <i class="fa-regular fa-moon"></i>
+                    </label>
+                </div>
+            </nav>
+            <div class="hero">
+                <img class="weather__day-img" id="weather__day-img" src="" alt="">
+                <h2 class="weather-state-celsius"></h2>
+                <p class="weather-city-country"></p>
+                <div class="hero_wrapper">
+                    <h3 class="sunset-time"></h3>
+                    <h3 class="sunset-day"></h3>
+                </div>
+            </div>
+        </header>
+        <div class="map-wrapper">
+            <iframe
+            id="map"
+            width="100%"
+            height="100%"
+            src="https://maps.google.com/maps?q=Tashkent%20Dates%10Products&amp;t=&amp;z=12&amp&output=embed" frameborder="0"></iframe>
+        </div>
+       <div class="contend">
+        <div>
+            <div class="weather__wrapper">
+                <div class="weather__wrapper-item">
+                    <img class="water"  src="./images/water.svg" alt="">
+                    <div class="humidity__item">
+                        <h3 class="item_text">Humidity</h3>
+                        <p class="humidity"></p>
+                    </div>
+                </div>
+                <div class="weather__wrapper-item2">
+                    <img class="sun__img" src="./images/sun.svg" alt="">
+                    <div class="item2__wrapper">
+                        <h3 class="wrapper__text">UV index</h3>
+                        <p class="uv"></p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="weather__wrapper-item3">
+                    <img class="sunset" src="./images/sunset.svg" alt="">
+                    <div class="item3__wrapper">
+                        <h3>Sunset</h3>
+                        <p class="sunset__time"></p>
+                    </div>
+                </div>
+                <div class="weather__wrapper-item4">
+                    <img class="sunrise" src="./images/sunrise.svg" alt="">
+                    <div class="item4__wrapper">
+                        <h3>Sunrise</h3>
+                        <p class="sunrise__time"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-pa-wind">
+                <div class="pa-pressure">
+                    <p class="pa"></p>
+                </div>
+                <div class="wind__wrapper">
+                    <div class="wind-arrow">
+                        <div class="triangle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart">
+            <canvas id="mychart"></canvas>
+           <div class="days-weather-infocard"></div>
+           <div class="days-weather-infocard"></div>
+           <div class="days-weather-infocard"></div>
+        </div>
+       </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script/app.js"></script>
+</body>
+</html
